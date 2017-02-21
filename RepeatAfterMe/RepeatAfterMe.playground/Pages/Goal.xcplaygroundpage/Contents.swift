@@ -22,17 +22,30 @@ import PlaygroundSupport
 let canvas = Canvas(width: 360, height: 360)
 
 // Loop three times
-for i in 1...3 {
-    
-    // Generate random number between -75 and 75
-    let offset = Int(arc4random_uniform(150)) - 75
-    
-    // Draw circles in random horizontal positions in the middle of the canvas
-    canvas.drawEllipse(centreX: canvas.width / 2 + offset, centreY: 100 * i , width: 50, height: 50)
-
-}
+//for i in 1...3 {
+//    
+//    // Generate random number between -75 and 75
+//    let offset = Int(arc4random_uniform(150)) - 75
+//    
+////    Draw circles in random horizontal positions in the middle of the canvas
+//   canvas.drawEllipse(centreX: canvas.width / 2 + offset, centreY: 100 * i , width: 50, height: 50)
+//
+//}
 
 // Modify code above as needed and continue writing code below as needed... 
+
+//Draw Squares and Circles
+for x in stride(from: 10, through: 100, by: 10){
+    canvas.drawShapesWithBorders = true
+    canvas.drawShapesWithFill = false
+    canvas.borderColor = Color.black
+    
+    canvas.drawEllipse(centreX: 50, centreY: 310, width: x, height: x)
+    canvas.drawRectangle(bottomLeftX: 260 + x, bottomLeftY: 0, width: 100 - x, height: 100 - x)
+}
+
+
+
 
 
 
